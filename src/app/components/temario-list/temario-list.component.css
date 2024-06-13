@@ -1,0 +1,87 @@
+.temario-list-container {
+  padding: 16px;
+}
+
+.test-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.test-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 16px;
+}
+
+.test-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.mat-card-content p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resultado {
+  text-align: center;
+  font-weight: bold;
+}
+
+.resultado.apto {
+  color: green;
+}
+
+.resultado.no-apto {
+  color: red;
+}
+
+.dificultad-semaforo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #0D1717;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+.dificultad-luz {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 0 5px;
+  opacity: 0.3;
+}
+
+.facil {
+  background-color: lime;
+}
+
+.media {
+  background-color: yellow;
+}
+
+.dificil {
+  background-color: red;
+}
+
+.activo {
+  opacity: 1;
+}
+
+mat-card-header {
+  justify-content: space-between;
+}

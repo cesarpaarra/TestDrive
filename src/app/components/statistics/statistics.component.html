@@ -1,0 +1,18 @@
+<div class="results-container">
+    <h1 style="font-weight: bold;">Estadísticas de los Tests</h1>
+    <p>Esta gráfica muestra la media de aciertos de todos los tests realizados cada día.</p>
+    <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="results"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel">
+    </ngx-charts-bar-vertical>
+  </div>
+  

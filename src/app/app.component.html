@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span style="margin-right: 30px;">TestDrive</span>
+  <div class="toolbar-column toolbar-nav" *ngIf="isLoggedIn()">
+    <button mat-button routerLink="/tests" routerLinkActive="active">Todos los tests</button>
+    <button mat-button routerLink="/temarios" routerLinkActive="active">Temario</button>
+    <button mat-button routerLink="/historial" routerLinkActive="active">Historial</button>
+    <button mat-button routerLink="/statistics" routerLinkActive="active">Estadísticas</button>
+  </div>
+  <div class="toolbar-column toolbar-logout" *ngIf="isLoggedIn()">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <img src="assets/images/usuario.png" class="profile-pic">
+        <span>{{ getUsername()  }} - {{ getNIF() }}</span>
+      </div>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">Cerrar Sesión</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

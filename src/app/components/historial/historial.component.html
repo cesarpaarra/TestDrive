@@ -1,0 +1,20 @@
+<div class="historial-container">
+  <h1 style="font-weight: bold;">Historial de Tests</h1>
+  <p>A continuación se muestra una lista con los tests realizados cada día y su resultado.</p>
+  <div *ngFor="let entry of historial" class="historial-entry">
+    <h2>{{ entry.date }}</h2>
+    <mat-card *ngFor="let test of entry.tests" class="test-card" [ngClass]="{'apto': test.correctas > 27, 'no-apto': test.correctas <= 27}">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon mat-list-icon>assignment</mat-icon>
+          Test {{ test.id }}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Resultado: {{ test.correctas }}/{{ test.total }} - 
+          <span>{{ test.correctas > 27 ? 'Apto' : 'No Apto' }}</span>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
